@@ -1,0 +1,28 @@
+#%%
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+import main_df as dff
+# Concatenate tables of all vehicles containing travel time-duration to create only one bigger table
+import glob
+folder = 'D:\\work\\Dr Buzna\\R files\\data\\trips'
+path = folder + "\\**\\Regression-sps-sp\\travel_time_regression.csv"
+df = pd.concat(map(pd.read_csv, glob.iglob(path, recursive=True)))
+print(type(df))
+print(df.head())
+print(df.columns)
+print('number of points is: ',len(df['Duration']))
+   
+plt.style.use('seaborn')
+plt.scatter(df['Length_m'],df['Duration'],
+        c=df["Duration"],
+        cmap=plt.cm.Reds,
+#                 s=scatter_points["Duration"]*0.5,
+        s=50,
+        edgecolor='black',
+        linewidth=0.75)
+plt.xlabel('Distance (meter)')
+plt.ylabel('Travel Time (min)')
+plt.savefig('plot.png', dpi=300, bbox_inches='tight')
+plt.colorbar()
