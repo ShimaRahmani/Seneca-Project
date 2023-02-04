@@ -1,0 +1,17 @@
+,move,road_type,0
+8,hs_sphs,living_street,298
+9,hs_sphs,motorway,156
+10,hs_sphs,motorway_link,154
+0,hs_sphs,primary,15467
+3,hs_sphs,primary_link,5158
+1,hs_sphs,residential,10427
+15,hs_sphs,road,1
+4,hs_sphs,secondary,4864
+7,hs_sphs,secondary_link,731
+2,hs_sphs,service,5365
+5,hs_sphs,tertiary,4563
+14,hs_sphs,tertiary_link,5
+13,hs_sphs,track,15
+11,hs_sphs,trunk,28
+12,hs_sphs,trunk_link,21
+6,hs_sphs,unclassified,3749
